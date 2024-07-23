@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 .container {
@@ -12,6 +13,7 @@ body, html {
     align-items: center;
     height: 100%;
     text-align: center;
+    padding: 20px;
 }
 
 header {
@@ -28,6 +30,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    width: 100%;
 }
 
 footer {
@@ -37,4 +41,14 @@ footer {
 img {
     max-width: 100%;
     height: auto;
+}
+
+@media (max-width: 600px) {
+    .subtitle {
+        font-size: 1em;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
 }
