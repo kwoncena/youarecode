@@ -39,8 +39,14 @@ footer {
 }
 
 img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+img.expanded {
+    transform: scale(1.5);
 }
 
 @media (max-width: 600px) {
