@@ -1,77 +1,74 @@
-/* Reset CSS for better cross-browser compatibility */
-* {
+/* styles.css */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
 }
 
 header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    padding: 10px;
 }
 
-#header-media {
-    width: 100%;
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the logo and buttons */
+}
+
+.nav-button {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    margin: 0 15px; /* Space around the buttons */
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.logo {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo img {
+    max-width: 150px; /* Adjust the size as needed */
     height: auto;
 }
 
-main {
-    margin: 20px 0;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
 }
 
-h1, h2, h3, p {
-    margin-bottom: 20px;
+.grid-item {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-h2 {
-    font-style: italic;
-}
-
-footer {
+.grid-item img {
     width: 100%;
-    padding: 10px 0;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s;
 }
 
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    h3 {
-        font-size: 1em;
-    }
-
-    p {
-        font-size: 0.9em;
-    }
+.grid-item:hover img {
+    opacity: 0.8;
 }
